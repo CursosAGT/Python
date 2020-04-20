@@ -45,7 +45,7 @@ print ("resultado radicacion2 : "+str(resultado_radicacion2_metodo(valor1,valor2
 print ("resultado porcentage : "+str(resultado_porcentage_metodo(valor1,valor2)))
 print ("resultado cociente : "+str(resultado_cociente_metodo(valor1,valor2)))
 print ("resultado resto : "+str(resultado_resto_metodo(valor1,valor2)))
-print (input("ej 009-1        continuar?"));
+pausa()
 from tkinter import *    # Carga módulo tk (widgets estándar)
 from tkinter import ttk  # Carga ttk (para widgets nuevos 8.5+)
 def iniciar_pantalla_raiz():
@@ -61,8 +61,7 @@ def iniciar_pantalla_raiz():
 	# El primer parámetro indica el nombre de la ventana 'iniciar_pantalla_raiz' donde se ubicará el botón
 
 	iniciar_pantalla_raiz.title('Aplicación')
-	etiqueta_pantalla_raiz = Label(iniciar_pantalla_raiz,bg = "white", text="resultado suma : "+str(resultado_suma_metodo(valor1,valor2)))
-	etiqueta_pantalla_raiz.pack()
+
 	etiqueta_pantalla_raiz = Label(iniciar_pantalla_raiz,bg = "white", text="resultado suma : "+str(resultado_suma_metodo(valor1,valor2)))
 	etiqueta_pantalla_raiz.pack()
 	etiqueta_pantalla_raiz = Label(iniciar_pantalla_raiz,bg = "white", text="resultado resta : "+str(resultado_resta_metodo(valor1,valor2)))

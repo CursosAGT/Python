@@ -103,7 +103,11 @@ https://www.guru99.com/how-to-create-a-database.html
 http://www.mysqltutorial.org/mysql-datetime/
 """)
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
+print("#pip install mysql-connector-python")
+#pip install mysql-connector-python
 #################################################################
 #Clase_BBDD_01
 import mysql.connector
@@ -119,7 +123,7 @@ nombre_tabla_backup = "backup"
 hoy = datetime.date.today()
 print(hoy)
 usuario = "root"
-password_de_msql="utn"
+password_de_msql="mysql2020"
 host_local="localhost"
 
 def Iniciar_practica():
@@ -228,7 +232,9 @@ conexión = str("mysql.connector.connect(host= '"+str(host_local)+"' ,user= '"+s
 print(conexión)
 Iniciar_practica()
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  1_1) SELECIONO Y MUESTRO TODO LO QUE TENGA LA TABLA ");
@@ -280,7 +286,9 @@ for cada_rec in resultados:
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  3)SELECCIONO CON FILTROS `WHERE` ");
@@ -294,7 +302,9 @@ print("Datos encontrados con Where")
 for cada_rec in resultados:
 	print(cada_rec)
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  4 ) FILTRO CON CARACTERES % wildcard '%LIKE%' ");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -309,7 +319,9 @@ print("cursor.close<--------------siempre cursor.close")
 cursor.close
 
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  5 ) FILTRO CON CARACTERES %s wildcard  SQL Injection ");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -323,7 +335,9 @@ for cada_rec in resultados:
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  6 ) SORT ");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -336,7 +350,9 @@ for cada_rec in resultados:
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  7 ) SORT INVERTIDO ");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -350,7 +366,9 @@ Recargar_practica()
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  8 ) BORRO UN RECORD ");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -380,7 +398,9 @@ Recargar_practica()
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  9 ) BORRO UN RECORD - Prevent SQL Injection ");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -408,7 +428,9 @@ Recargar_practica()
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  10 ) ACTUALIZAR UN DATO 'UPDATE'");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -433,7 +455,9 @@ for cada_rec in resultados:
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  11 ) ACTUALIZAR CON %s SQL Injection 'UPDATE' ?");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -461,7 +485,9 @@ for cada_rec in resultados:
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  12 ) LIMITO LA CANTIDAD DE RESULTADOS 'LIMIT' ");
 print ("You can limit the number of records returned from the query, by using the 'LIMIT' statement:");
@@ -474,7 +500,9 @@ for cada_rec in resultados:
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  13 ) INICIO DESDE OTRA POSICION OFFSET ");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -487,7 +515,9 @@ Recargar_practica()
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  14 ) BORRO UNA TABLA 'Drop' ");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)
@@ -513,7 +543,9 @@ Iniciar_practica()
 print("cursor.close<--------------siempre cursor.close")
 cursor.close
 pausa();
-limpiar();
+
+pausa();
+pausa();limpiar();
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print ("\n\n  15 ) BORRO UNA TABLA '2020_Marzo' (Drop) SI EXISTE ");
 connection = mysql.connector.connect(host= host_local,user= usuario, passwd= password_de_msql, database=nombre_DDBB)

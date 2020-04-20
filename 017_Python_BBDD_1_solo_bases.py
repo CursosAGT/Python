@@ -91,6 +91,8 @@ print("""
 https://www.w3schools.com/python/python_mysql_create_db.asp");
 http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc36272.1550/html/commands/X72692.htm
 """)
+print("#pip install mysql-connector-python")
+#pip install mysql-connector-python
 #################################################################
 #Clase_BBDD_01
 import mysql.connector
@@ -102,7 +104,7 @@ hoy = datetime.date.today()
 print(hoy)
 host_local="localhost"
 usuario = "root"
-password_de_msql="utn"
+password_de_msql="mysql2020"
 
 
 

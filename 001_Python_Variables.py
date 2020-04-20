@@ -52,65 +52,47 @@ print("""
 ║                                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
 """);
-limpiar();
+
+pausa();limpiar();
 print("""
 Mutable: su contenido (o dicho valor) puede cambiarse en tiempo de ejecución.");
 Inmutable: su contenido (o dicho valor) no puede cambiarse en tiempo de ejecución.\n");
 \n");
-Categoría de tipo________Nombre______Descripción");
-Números inmutables_______int_________entero");
-_________________________long________entero largo");
-_________________________float_______coma flotante");
-_________________________complex_____complejo");
-_________________________bool________booleano True / False");
-Secuencias inmutables____str_________cadena de caracteres");
-_________________________unicode_____cadena de caracteres Unicode");
-_________________________tuple_______tupla");
-_________________________xrange______rango inmutable");
-Secuencias mutables______list________lista");
-_________________________range_______rango mutable");
-Mapeosprint______________dict________diccionario");
-Conjuntos mutables_______set_________conjunto mutable");
-Conjuntos inmutables_____frozenset___Conjunto inmutable");
+Categoría de tipo________Nombre______Descripción"
+Números inmutables_______int_________entero"
+_________________________long________entero largo"
+_________________________float_______coma flotante"
+_________________________complex_____complejo"
+_________________________bool________booleano True / False"
+Secuencias inmutables____str_________cadena de caracteres"
+_________________________unicode_____cadena de caracteres Unicode"
+_________________________tuple_______tupla"
+_________________________xrange______rango inmutable"
+Secuencias mutables______list________lista"
+_________________________range_______rango mutable"
+Mapeosprint______________dict________diccionario"
+Conjuntos mutables_______set_________conjunto mutable"
+Conjuntos inmutables_____frozenset___Conjunto inmutable"
 
-\nhttp://docs.python.org.ar/tutorial/3/classes.html");
-\n Objeto, es su materialización de algo incluso un dato");
-\n Clase, es el razonamiento abstracto de un objeto");
-\n Instanciar, es crear objetos desde una clase");
-\n Las clases en este contexto permiten definir los atributos y el comportamiento, mediante métodos, de los objetos de un programa. Una clase es una especie de plantilla o prototipo que se utiliza para crear instancias individuales del mismo tipo de objeto.");
-\n Los atributos definen las características propias del objeto y modifican su estado. Son datos asociados a las clases y a los objetos creados a partir de ellas.");
-\n De ello, se deducen los dos tipos de atributos o de variables existentes: variables de clase y variables de instancia (objetos).");
-\n Los métodos son bloques de código (o funciones) de una clase que se utilizan para definir el comportamiento de los objetos.");
-\n Tanto para acceder a los atributos como para llamar a los métodos se utiliza el método denominado de notación de punto que se basa en escribir el nombre del objeto o de la clase seguido de un punto y el nombre del atributo o del método con los argumentos que procedan: clase.atributo, objeto.atributo, objeto.método([argumentos]).");
+\nhttp://docs.python.org.ar/tutorial/3/classes.html"
+\n Objeto, es su materialización de algo incluso un dato"
+\n Clase, es el razonamiento abstracto de un objeto"
+\n Instanciar, es crear objetos desde una clase"
+\n Las clases en este contexto permiten definir los atributos y el comportamiento, mediante métodos, de los objetos de un programa. Una clase es una especie de plantilla o prototipo que se utiliza para crear instancias individuales del mismo tipo de objeto."
+\n Los atributos definen las características propias del objeto y modifican su estado. Son datos asociados a las clases y a los objetos creados a partir de ellas."
+\n De ello, se deducen los dos tipos de atributos o de variables existentes: variables de clase y variables de instancia (objetos)."
+\n Los métodos son bloques de código (o funciones) de una clase que se utilizan para definir el comportamiento de los objetos."
+\n Tanto para acceder a los atributos como para llamar a los métodos se utiliza el método denominado de notación de punto que se basa en escribir el nombre del objeto o de la clase seguido de un punto y el nombre del atributo o del método con los argumentos que procedan: clase.atributo, objeto.atributo, objeto.método([argumentos])."
 \n
-\n Una variable de clase es compartida por todas las instancias de una clase. Se definen dentro de la clase (después del encabezado de la clase) pero nunca dentro de un método. Este tipo de variables no se utilizan con tanta frecuencia como las variables de instancia.");
+\n Una variable de clase es compartida por todas las instancias de una clase. Se definen dentro de la clase (después del encabezado de la clase) pero nunca dentro de un método. Este tipo de variables no se utilizan con tanta frecuencia como las variables de instancia."
 \n Una variable de instancia se define dentro de un método y pertenece a un objeto determinado de la clase instanciada.
 """);
 nuevo(0,"inicio");
 
 #################################################################
-"""
-ir a consola (py)
->>> x=2020
->>> type(x)
-??????
->>> x=20.20
->>> type(x)
-??????
->>> x=20,20
->>> type(x)
-??????
->>> x=2,0,2,0
->>> type(x)
-??????
->>> x="Ariel"
->>> type(x)
-??????
->>> x=True
->>> type(x)
-??????
+#Clase_Variables_00
 
-"""
+nuevo(0);
 #################################################################
 #Clase_Variables_01 
 print("  *String - Cadenas puede incorporar en cualquiera de los dos comillas simples (') o comillas dobles (\") o para multiplas lineas se usan comillas triples de cada una (''' o """);
@@ -178,8 +160,8 @@ for i in range (3):#BUCLE <------------------------------------luego veremos est
 	var_b = input("variable B:")
 	print ("variable a: "+var_a)
 	print ("variable b: "+var_b)
-	print ("variable a+b"+(var_a+var_b))
-	print ("variable a+2+b"+(var_a*2+var_b))
+	print ("variable a+b: "+(var_a+var_b))
+	print ("variable a+2+b: "+(var_a*2+var_b))
 #--------------------------------
 nuevo(2);
 #################################################################
@@ -199,17 +181,17 @@ nuevo(3);
 #################################################################
 #Clase_Variables_04
 print("""
-╔═════════════════════════════════════╦═══════════════════════════════════════╗
-║                                     ║                                       ║ 
-║                  a += b             ║ 	           a = a + b              ║
-║                  a -= b 	          ║ 	           a = a - b              ║
-║                  a *= b 	          ║ 	           a = a * b              ║
-║                  a /= b 	          ║ 	           a = a / b              ║
-║                  a **= b 	          ║ 	           a = a ** b             ║
-║                  a //= b 	          ║ 	           a = a // b             ║
-║                  a %= b 	          ║ 	           a = a % b              ║
-║                                     ║                                       ║
-╚═════════════════════════════════════╩═══════════════════════════════════════╝
+╔══════════════════════════╦══════════════════════════╦══════════════════════════╗
+║                          ║                          ║                          ║ 
+║    + Suma                ║         a += b           ║           a = a + b      ║
+║    - Resta               ║         a -= b           ║           a = a - b      ║
+║    * Multiplicación      ║         a *= b           ║           a = a * b      ║
+║    ** Exponente          ║         a **= b          ║           a = a ** b     ║
+║    / División            ║         a /= b           ║           a = a / b      ║
+║    // División entera    ║         a //= b          ║           a = a // b     ║
+║    % Módulo              ║         a %= b           ║           a = a % b      ║
+║                          ║                          ║                          ║
+╚══════════════════════════╩══════════════════════════╩══════════════════════════╝
 """);
 a=8
 b=5
@@ -296,11 +278,26 @@ print(c_dato.items())        # Registros del contador por clave-valor
 nuevo(9);
 #################################################################
 #Clase_Variables_010
+dato ="Ariel";
+dato_salida_1, dato_salida_2, dato_salida_3, dato_salida_4=1973,"SEPTIEMBRE",True,1.78;
+print (f"Soy {dato}, Naci en {dato_salida_1} en {dato_salida_2} llegue a medir {dato_salida_4} y sigo trabajando : {dato_salida_3}");
+nuevo(10);
+#################################################################
+#Clase_Variables_011
+array="INICIO";
+dato_salida_1,dato_salida_2,dato_salida_3,*dato_salida_4=array;
+print(f"dato 1 {dato_salida_1} un dato - una variable")
+print(f"dato 2 {dato_salida_2} un dato - una variable")
+print(f"dato 3 {dato_salida_3} un dato - una variable")
+print(f"datos 4 {dato_salida_4} un array de datos - una lista")
+nuevo(11);
+#################################################################
+#Clase_Variables_012
 cadena='"hola" como va todo AHORA DARE UN ERROR'
 print (cadena);
 del cadena
-print (cadena);#<-----------------------------ver el error aqui
+print (cadena);#<-----------------------------ver el error aqui ya que al ser borrada no se puede imprimir.
 
 print("\n por favor cargue de Ambitos ");
-nuevo(10,"fin");
+nuevo(12,"fin");
 #################################################################

@@ -89,9 +89,13 @@ print("""
 Scripts>python -m pip install mysql-connector
 https://www.w3schools.com/python/python_mysql_create_db.asp
 """)
+
 import mysql.connector
 import datetime
 limpiar();
+print("#pip install mysql-connector-python")
+#pip install mysql-connector-pythons
+
 #################################################################
 #Clase_BBDD_01
 def crear_base():
@@ -105,8 +109,8 @@ def crear_base():
 		print ("Creamos la base de datos  "+str(nombre_DDBB))
 		print ("cerramos conexión")
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -128,8 +132,8 @@ def listar_bases():
 		print (lista_de_bases)
 		print ("cerramos conexión")
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -147,8 +151,8 @@ def borrar_base():
 			print ("Borramos la base de datos ", nombre_DDBB )
 			cursor.execute("DROP DATABASE "+str(nombre_DDBB))
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -207,8 +211,8 @@ def agregar_id_tablas():
 		print (lista_de_tablas)
 		print("cerramos conexión");
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -235,8 +239,8 @@ def listar_tablas():
 			print (column[colunma_numero]);
 		print("cerramos conexión");
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -272,8 +276,8 @@ def Iniciar_practica():
 		connection.commit()
 		print(cursor.rowcount, "record inserted.")
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -304,8 +308,8 @@ def agregar_datos_tabla():
 		connection.commit()
 		print(cursor.rowcount, "record inserted.")
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -320,8 +324,8 @@ def listar_datos_tabla():
 			print(fila)
 			print("------------------------------\n")
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -345,8 +349,8 @@ def modificar_datos_tabla():
 			print(fila)
 			print("------------------------------\n")
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -370,8 +374,8 @@ def borrar_datos_tabla():
 			print(fila)
 			print("------------------------------\n")
 		cursor.close
-		print (input("		continuar?"));
-		limpiar();
+		
+		pausa();limpiar();
 	except Exception as e:
 		print("Exeception occured:{}".format(e))
 	finally:
@@ -382,19 +386,24 @@ nombre_tabla = "alumnos"
 hoy = datetime.date.today()
 print(hoy)
 usuario = "root"
-password_de_msql="utn"
+password_de_msql="mysql2020"
 host_local="localhost"
 conexión = str("mysql.connector.connect(host= '"+str(host_local)+"' ,user= '"+str(usuario)+"' , passwd= '"+str(password_de_msql)+"', database= '"+str(nombre_DDBB)+"' )")
 print(conexión)
-accion = input ("Borramos base de datos (S/N)"); limpiar();
+accion = input ("Borramos base de datos (S/N)"); 
+pausa();limpiar();
 if accion.upper() =="S": borrar_base();
-accion = input ("Creamos base de datos (S/N)"); limpiar();
+accion = input ("Creamos base de datos (S/N)"); 
+pausa();limpiar();
 if accion.upper() =="S": crear_base();
-accion= input("Listamos base de datos existentes (S/N)"); limpiar();
+accion= input("Listamos base de datos existentes (S/N)"); 
+pausa();limpiar();
 if accion.upper() =="S": listar_bases();
-accion = input ("Creamos Tablas en la base de datos (S/N)"); limpiar();
+accion = input ("Creamos Tablas en la base de datos (S/N)"); 
+pausa();limpiar();
 if accion.upper() =="S": crear_tablas();
-accion= input("Agrego columna ID en tabla (S/N)"); limpiar();
+accion= input("Agrego columna ID en tabla (S/N)"); 
+pausa();limpiar();
 if accion.upper() =="S": agregar_id_tablas();
 ################################################            segunda parte del ejercicio
 print ("segunda parte del ejercicio")

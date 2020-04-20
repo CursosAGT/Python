@@ -5,7 +5,7 @@ def Ej_ya_hechos():
 	#Con tab colocaremos aquí las practicas hechas
 	pass
 
-limpiar();
+pausa();limpiar();
 ##################################################################################################################################
 print("""
 #http://docs.fabfile.org/en/2.4/
@@ -20,7 +20,7 @@ print("""
   Por lo general los lenguajes compilados son más rápidos y consumen menos recursos que los lenguajes interpretados en vista de que el archivo resultante es código de bajo nivel, mientras que los lenguajes interpretados deben seguir un proceso a través de varios niveles de abstracción hasta que las instrucciones son ejecutadas por el sistema.
   Python es un lenguaje interpretado de alto nivel.
 """);
-limpiar();
+pausa();limpiar();
 ##################################################################################################################################
 print("""
 * * * * * Sinoptico* * * * *
@@ -49,7 +49,7 @@ print("""
   * Ámbito, es una región en el espacio donde los nombres (cuyos datos busco) son accesibles directamente.(Recordad que puede haber el mismo nombre como atributo como acción y en distintos ámbitos
   * Ámbito, es observable por estructuras de tabulación
 """);
-limpiar();
+pausa();limpiar();
 ##################################################################################################################################
 print("""
   * Un espacio con un nombre hereda del Nombre ser la referencia a un dato en un tiempo y espacio.
@@ -64,26 +64,13 @@ print("""
       Mutable: su contenido (o dicho valor) puede cambiarse en tiempo de ejecución.
       Inmutable: su contenido (o dicho valor) no puede cambiarse en tiempo de ejecución.
 """);
-limpiar();
+pausa();limpiar();
 ##################################################################################################################################
 print("""
-Categoría de tipo________Nombre______Descripción
-Números inmutables_______int_________entero
-_________________________long________entero largo
-_________________________float_______coma flotante
-_________________________complex_____complejo
-_________________________bool________booleano True / False
-Secuencias inmutables____str_________cadena de caracteres
-_________________________unicode_____cadena de caracteres Unicode
-_________________________tuple_______tupla
-_________________________xrange______rango inmutable
-Secuencias mutables______list________lista
-_________________________range_______rango mutable
-Mapeosprint______________dict________diccionario
-Conjuntos mutables_______set_________conjunto mutable
-Conjuntos inmutables_____frozenset___Conjunto inmutable
+ve este video
+https://youtu.be/Og847HVwRSI
 """);
-limpiar();
+pausa();limpiar();
 ##################################################################################################################################
 print("""
 https://pythonprogramming.net/
@@ -104,7 +91,7 @@ Características de Python.
       Extensiones y módulos fácilmente escritos en C, C + + (o Java para Jython, o. NET para IronPython).
       Integrable dentro de las aplicaciones como una interfaz de scripting.
 """);
-limpiar();
+pausa();limpiar();
 ##################################################################################################################################
 print("""
   Aplicaciones de Python.
@@ -123,7 +110,7 @@ print("""
       Animación, videojuegos e imágenes generadas por computadora.
       Aplicaciones móviles.
 """);
-limpiar();
+pausa();limpiar();
 ##################################################################################################################################
 print("""
   Distribuciones:
@@ -144,7 +131,7 @@ print("""
       Sintaxis: cómo se deben escribir las notaciones (orden, estructura).
 Gracias
 """);
-limpiar();
+pausa();limpiar();
 ##################################################################################################################################
 
 print("""
@@ -216,5 +203,6 @@ pip install imutils tkintertable numpy opencv-python matplotlib Pillow mysql-con
 sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose plotly
 zypper -n in mysql mysql-administration mysql-client mysql-query-browser mysql-gui-tools
 """);
-
+print("#pip install mysql-connector-python")
+#pip install mysql-connector-python
 

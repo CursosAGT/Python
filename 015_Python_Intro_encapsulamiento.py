@@ -85,41 +85,47 @@ Para empezar nuestro ejemplo de encapsulación vamos a crear una clase que llama
 	class Ejemplo:
 		def publico(self):
 			print ("Publico")
+		def _oculta(self):
+			print ("Oculta")
 		def __privado(self):
 			print ("Privado")
 	ej = Ejemplo()
 	ej.publico()
+	ej._oculta()
 	ej.__privado()#<---------------------------error
-
 	""")
 nuevo(0,"inicio");
 print("""
-Las variables que comienzan por un guion bajo (_foo) son consideradas privadas.  Su nombre indica a otros programadores que no son publicas:  son un detalle de implementación del que no se puede depender — entre otras cosas porque podrían desaparecer en cualquier momento
-
+Las variables que comienzan por un guion bajo (_foo) son consideradas privadas.
+Su nombre indica a otros programadores que no son publicas:
+		son un detalle de implementación del que no se puede depender — entre otras cosas porque 
+		podrían desaparecer  en cualquier momento
 """)
 class Objeto(object):
-	def __init__(self, nombre, secreto):
+	def __init__(self, nombre, oculto):
 		self.nombre = nombre
-		self._secreto = secreto
+		self._oculto = oculto
+		
 objeto_1 = Objeto("Pepe", "canta en la ducha")
-print ("Secreto:", objeto_1._secreto)
-objeto_1._secreto = "no se baña"
-print ("Secreto:", objeto_1._secreto)
+print ("Oculto:", objeto_1._oculto)
+objeto_1._oculto = "no se baña"
+print ("Oculto:", objeto_1._oculto)
+pausa()
 limpiar()
 print("""
-Dos guiones bajos al comienzo del nombre (__spam) llevan el ocultamiento un paso mas allá, enmarañando(name-mangling) la variable de forma que sea mas difícil verla desde fuera
+Dos guiones bajos al comienzo del nombre (__spam) 
+llevan el ocultamiento un paso mas allá, a la privacidad, enmarañando(name-mangling) la variable de forma que sea mas
+difícil verla desde fuera
 """)
 class Objeto(object):
-	def __init__(self, nombre, secreto):
+	def __init__(self, nombre, privado):
 		self.nombre = nombre
-		self.__secreto = secreto
+		self.__privado = privado
 objeto_1 = Objeto("Pepe", "canta en la ducha")
-print ("Secreto:", objeto_1._secreto)
-objeto_1.__secreto = "no se baña"
-print ("Secreto:", objeto_1._secreto)
-
-
-
+print ("Privado:", objeto_1._Objeto__privado)
+objeto_1.__privado = "no se baña"
+print ("Privado:", objeto_1._Objeto__privado)
+nuevo(1)
 ##################################################################################################################################
 #Ejercicio_Clases_01
 class ejemplo():

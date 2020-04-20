@@ -50,7 +50,7 @@ print("tupla a listas con tuple")
 print ("valores tupla 1"+str(Nombre_tupla_1))
 print ("valores lista 1"+str(Nombre_lista_1))
 print ("paso los datos de mi tupla a mi lista")
-Nombre_lista_1=tuple(Nombre_tupla_1)
+Nombre_lista_1=list(Nombre_tupla_1)
 print ("Nuevos valores lista 1"+str(Nombre_lista_1))
 nuevo(1);
 #################################################################
@@ -58,7 +58,7 @@ nuevo(1);
 print("lista a tuple con list")
 print ("valores tupla 2"+str(Nombre_tupla_2))
 print ("paso los datos de mi lista a mi tupla 2")
-Nombre_tupla_2=list(Nombre_lista_1)
+Nombre_tupla_2=tuple(Nombre_lista_1)
 print ("Nuevos valores tupla 2"+str(Nombre_tupla_2))
 nuevo(2);
 #################################################################
@@ -81,7 +81,7 @@ print ("posicion [-3]  "+Nombre_tupla_1[-9])
 nuevo(5);
 #################################################################
 #Clase_Tupples_Ej_006
-print("sectores o porsiones") 
+print("sectores o porciones") 
 print (Nombre_tupla_1)
 print ("posicion [4 al 8]  "+str(Nombre_tupla_1[4:8]))
 print ("posicion [0 al -2]  "+str(Nombre_tupla_1[0:-2]))

@@ -5,7 +5,9 @@ def Ej_ya_hechos():
 	#Con tab colocaremos aquí las practicas hechas
 	pass
 
-limpiar();
+
+pausa();
+pausa();limpiar();
 #################################################################
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗

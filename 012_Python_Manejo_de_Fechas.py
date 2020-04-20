@@ -1,5 +1,6 @@
 from Estructura import *
 nuevo(0,"inicio");
+import datetime
 #################################################################
 def Ej_ya_hechos():
 	#Con tab colocaremos aqui las prácticas hechas
@@ -21,7 +22,7 @@ print("""
 ╚═════════════════════════════════════════════════════════════════════════════╝
 https://www.tutorialspoint.com/python/python_date_time.htm
 """)
-limpiar();
+pausa();limpiar();
 #################################################################
 print ("""
 Function with Description
@@ -62,7 +63,7 @@ Returns the current time instant, a floating-point number of seconds since the e
 12      time.tzset()
 Resets the time conversion rules used by the library routines. The environment variable TZ specifies how this is done.
 """)
-limpiar();
+pausa();limpiar();
 #################################################################
 print ("""
 Attribute with Description
@@ -111,16 +112,16 @@ The inverse of time.gmtime: accepts a time instant in time-tuple form and return
 12      calendar.weekday(year,month,day)
 Returns the weekday code for the given date. Weekday codes are 0 (Monday) to 6 (Sunday); month numbers are 1 (January) to 12 (December).
 """)
-limpiar();
+pausa();limpiar();
 #################################################################
 #Clase_fechas_Ej_001
 import datetime
 
-
 print ("uso de libreria # datetime ")
+print(f"Fecha - hora              :"+str(datetime.datetime.now()))
+print(f"Fecha - dia               :"+str(datetime.date.today()))
 fecha = datetime.datetime.now()
 print(f"Fecha - hora              :"+str(fecha))
-print(f"Fecha                     :"+str(datetime.date.today()))
 print(f"Dia numero                :"+str(fecha.day));
 print(f"Mes                       :"+str(fecha.month));
 print(f"Año                       :"+str(fecha.year));
@@ -165,7 +166,7 @@ print('''	%a  Locale’s abbreviated weekday name.
 	%z  UTC offset in the form +HHMM or -HHMM.
 	%Z  Time zone name (empty string if the object is naive).
 	%%  A literal '%' character.''')
-limpiar();
+pausa();limpiar();
 print(f".strftime( %a )			:"+str(fecha.strftime("%a")));
 print(f".strftime( %b )			:"+str(fecha.strftime("%b")));
 print(f".strftime( %c )			:"+str(fecha.strftime("%c")));
@@ -175,12 +176,12 @@ print(f".strftime( %f )			:"+str(fecha.strftime("%f")));
 print(f".strftime( %g )			:"+str(fecha.strftime("%g")));
 print(f".strftime( %h )			:"+str(fecha.strftime("%h")));
 print(f".strftime( %j )			:"+str(fecha.strftime("%j")));
-print(f".strftime( %k )			:"+str(fecha.strftime("%k")));
-print(f".strftime( %l )			:"+str(fecha.strftime("%l")));
+#print(f".strftime( %k )			:"+str(fecha.strftime("%k")));
+#print(f".strftime( %l )			:"+str(fecha.strftime("%l")));
 print(f".strftime( %m )			:"+str(fecha.strftime("%m")));
 print(f".strftime( %p )			:"+str(fecha.strftime("%p")));
 print(f".strftime( %r )			:"+str(fecha.strftime("%r")));
-print(f".strftime( %s )			:"+str(fecha.strftime("%s")));
+#print(f".strftime( %s )			:"+str(fecha.strftime("%s")));
 print(f".strftime( %u )			:"+str(fecha.strftime("%u")));
 print(f".strftime( %w )			:"+str(fecha.strftime("%w")));
 print(f".strftime( %x )			:"+str(fecha.strftime("%x")));
@@ -220,7 +221,7 @@ print("a =", a)
 fecha = datetime.datetime.now()
 #fecha2 = fecha(fecha,"%d %m, %Y")
 fecha2 = (fecha.strftime("%x"));
-print(f"Fecha %x		 	:"+str(fecha.strftime("%F")));
+print(f"Fecha %x		 	:"+str(fecha.strftime("%x")));
 #		a = time.strptime('my date', "%b %d %Y %H:%M")
 print(f"La fecha es 			:{fecha2}")
 
@@ -291,10 +292,19 @@ nuevo(5);
 #################################################################
 #Clase_fechas_Ej_006
 from datetime import date
+variable_Anio=2020
+variable_Mes=4
+variable_Dia=18
+
+j_date = date(variable_Anio,variable_Mes,variable_Dia)
+print("fecha inicial: ",j_date)
+
 i_date = date(2020, 11, 2)
-f_date = date(2020, 11, 11)
 print("fecha inicial: ",i_date)
+
+f_date = date(2020, 11, 11)
 print("fecha final: ",f_date)
+
 delta = f_date - i_date
 print("diferencias entre fechas",delta.days)
 nuevo(6);
@@ -694,7 +704,7 @@ print("Se establece el lunes como primer día de la semana");
 calendario = calendar.TextCalendar(calendar.MONDAY)
 calendario.prmonth(año, mes)
 
-limpiar();
+pausa();limpiar();
 #################################################################
 
 print("Obtener matriz con calendario de mes actual: (Calendar monthdayscalendar)");

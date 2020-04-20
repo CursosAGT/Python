@@ -68,10 +68,10 @@ print ("clave 6  "+Nombre_diccionario_1["clave 6"])
 print ("clave 5  "+Nombre_diccionario_1["clave 5"])
 print ("clave 9  "+Nombre_diccionario_1["clave 9"])
 print ("clave 1  "+Nombre_diccionario_1["clave 1"])
-print (len(Nombre_diccionario_1))
-print (Nombre_diccionario_1.items())
-print (Nombre_diccionario_1.keys())
-print (Nombre_diccionario_1.values())
+print ("cantidad de datos en el dic",len(Nombre_diccionario_1))
+print ("items",Nombre_diccionario_1.items())
+print ("llaves",Nombre_diccionario_1.keys())
+print ("valores",Nombre_diccionario_1.values())
 nuevo(2);
 #################################################################
 #Ejercicio_Diccionarios_Ej_03
@@ -109,12 +109,19 @@ print("de tuplas a diccionrios")
 print ("valores tupla 1"+str(Nombre_tupla_1))
 print ("valores tupla 2"+str(Nombre_tupla_2))
 Nombre_diccionario_3 = {}
+Nombre_diccionario_4 = {}
 Nombre_diccionario_2 = {Nombre_tupla_1[0]:Nombre_tupla_2[0],Nombre_tupla_1[1]:Nombre_tupla_2[1],Nombre_tupla_1[2]:Nombre_tupla_2[2],Nombre_tupla_1[3]:Nombre_tupla_2[3],Nombre_tupla_1[4]:Nombre_tupla_2[4],Nombre_tupla_1[5]:Nombre_tupla_2[5],Nombre_tupla_1[6]:Nombre_tupla_2[6],Nombre_tupla_1[7]:Nombre_tupla_2[7],Nombre_tupla_1[8]:Nombre_tupla_2[8],Nombre_tupla_1[9]:Nombre_tupla_2[9]}
-print (Nombre_diccionario_2)
+print ("\ndiccionario hecho a mano:\t",Nombre_diccionario_2)
+
 #                          o
 for contador in range (0,9):
 	Nombre_diccionario_3[Nombre_tupla_1[contador]] = Nombre_tupla_2[contador]
-print (Nombre_diccionario_3)
+print ("\ndiccionario hecho en un bucle:\t",Nombre_diccionario_3)
+Nombre_diccionario_4 = dict.fromkeys(Nombre_tupla_1,Nombre_tupla_2)
+print ("\ndiccionario hecho con fromkey:\t",Nombre_diccionario_4)
+
+
+
 del Nombre_diccionario_3
 nuevo(6);
 #################################################################
@@ -128,16 +135,16 @@ nuevo(7);
 #################################################################
 #Ejercicio_Diccionarios_Ej_08
 diccionario = {1: ["Python", 33.2, 'UP'],
-	 2: ["Java", 23.54, 'DOWN'],
-	 3: ["Ruby", 17.22, 'UP'],
-	 10: ["Lua", 10.55, 'DOWN'],
-	 5: ["Groovy", 9.22, 'DOWN'],
-	 6: ["C", 1.55, 'UP']
-	 }
+				 2: ["Java", 23.54, 'DOWN'],
+				 3: ["Ruby", 17.22, 'UP'],
+				 10: ["Lua", 10.55, 'DOWN'],
+				 5: ["Groovy", 9.22, 'DOWN'],
+				 6: ["C", 1.55, 'UP']
+				 }
 
 print ("{:<8} {:<15} {:<10} {:<10}".format('clave','Item_1','Item_2','Item_3'))
-for clave_primaria, listas_interiores in diccionario.items():
-	Item_1, Item_2, Item_3 = listas_interiores
+for clave_primaria, listas_valores_interiores in diccionario.items():
+	Item_1, Item_2, Item_3 = listas_valores_interiores
 	print ("{:<8} {:<15} {:<10} {:<10}".format(clave_primaria, Item_1, Item_2, Item_3))
 nuevo(8);
 #################################################################
@@ -154,15 +161,15 @@ nuevo(9);
 #################################################################
 #Ejercicio_Diccionarios_Ej_010
 Nombre_diccionario_1 = {"Primero": "wwww","Segundo":"xxxx","Tercero":"yyyy","Cuarto":"zzzz"}
-for cont in Nombre_diccionario_1:
-	print("Clave : {} , Valor : {}".format(cont,Nombre_diccionario_1[cont]))
+for llaves in Nombre_diccionario_1:
+	print("Clave : {} , Valor : {}".format(llaves,Nombre_diccionario_1[llaves]))
 print ("Este diccionario contiene las siguientes claves: ", " ".join(Nombre_diccionario_1))
 print ("Ordenamos por el largo del la clave ")
-for cont in sorted(Nombre_diccionario_1, key=len):
-	print (cont, Nombre_diccionario_1[cont])
+for llaves in sorted(Nombre_diccionario_1, key=len):
+	print (llaves, Nombre_diccionario_1[llaves])
 count = {}
-for cont in Nombre_diccionario_1:
-	count[cont] = count.get(cont, 0) + 1
+for llaves in Nombre_diccionario_1:
+	count[llaves] = count.get(llaves, 0) + 1
 print (count)
 del Nombre_diccionario_1
 nuevo(10);
@@ -172,101 +179,105 @@ Nombre_diccionario_1 = {'Abuelo_A':{'Hijos':2,'Nietos':2},
 						'Abuelo_B':{'Hijos':3,'Nietos':1},
 						'Abuelo_C':{'Hijos':1,'Nietos':0}
 						}
-for cont_1 in Nombre_diccionario_1:
-	print ("El ",cont_1, end=" ")
-	for cont_2 in Nombre_diccionario_1[cont_1]:
-		print ("tiene ",cont_2,' ',Nombre_diccionario_1[cont_1][cont_2])
-
-for claves, valores in Nombre_diccionario_1.items():
-	print(claves)
-	for attribute, valores in Nombre_diccionario_1.items():
-		print('{} : {}'.format(attribute, valores))
+for clave_primaria in Nombre_diccionario_1:
+	print ("El ",clave_primaria, end="\t")
+	for clave_secundaria in Nombre_diccionario_1[clave_primaria]:
+		print ("tiene ",clave_secundaria,' ',Nombre_diccionario_1[clave_primaria][clave_secundaria])
+		
+print("--------------------------------------------------------------------------")
+for clave_primaria, listas_valores_interiores in Nombre_diccionario_1.items():
+	print(clave_primaria)
+	for attribute, listas_valores_interiores in Nombre_diccionario_1[clave_primaria].items():
+		print('\t{}\t :\t {}'.format(attribute, listas_valores_interiores))
 del Nombre_diccionario_1
 nuevo(11);
 #################################################################
 #Ejercicio_Diccionarios_Ej_012
 
 # Input dictionary
+print("transpongo el diccionario");
 Nombre_diccionario_1 = {	"nombres":["Juan", "Pedro","Laura","Roxana","Alberto"],
 							"profesion":["Astronauta", "Biologo","Quimica","Fisica","Cocinero"],
-							"edad":[33, 55, 45, 25, 32] }
+							"edad":[33, 55, 45, 25, 32] };
 
-# Use of format_map() function
-print("{nombres[0]} trabaja de {profesion[0]} y tiene {edad[0]} años.".format_map(Nombre_diccionario_1))
-print("{nombres[1]} trabaja de {profesion[1]} y tiene {edad[1]} años.".format_map(Nombre_diccionario_1))
-print("{nombres[2]} trabaja de {profesion[2]} y tiene {edad[2]} años.".format_map(Nombre_diccionario_1))
-print("{nombres[3]} trabaja de {profesion[3]} y tiene {edad[3]} años.".format_map(Nombre_diccionario_1))
-print("{nombres[4]} trabaja de {profesion[4]} y tiene {edad[4]} años.".format_map(Nombre_diccionario_1))
-print(input("Continuar?????"))
+print(" Uso de la funcion format_map()");
+print("{nombres[0]} trabaja de {profesion[0]} y tiene {edad[0]} años.".format_map(Nombre_diccionario_1));
+print("{nombres[1]} trabaja de {profesion[1]} y tiene {edad[1]} años.".format_map(Nombre_diccionario_1));
+print("{nombres[2]} trabaja de {profesion[2]} y tiene {edad[2]} años.".format_map(Nombre_diccionario_1));
+print("{nombres[3]} trabaja de {profesion[3]} y tiene {edad[3]} años.".format_map(Nombre_diccionario_1));
+print("{nombres[4]} trabaja de {profesion[4]} y tiene {edad[4]} años.".format_map(Nombre_diccionario_1));
+pausa();limpiar();
 
-print ("{:<8} {:<15} {:<10} {:<10} {:<10} {:<10}".format('clave','Item_1','Item_2','Item_3', 'Item_4', 'Item_5'))
-for clave_primaria, listas_interiores in Nombre_diccionario_1.items():
-	Item_1, Item_2, Item_3, Item_4, Item_5 = listas_interiores
-	print ("{:<8} {:<15} {:<10} {:<10} {:<10} {:<10}".format(clave_primaria, Item_1, Item_2, Item_3, Item_4, Item_5))
-print(input("Continuar?????"))
+print("--------------------------------------------------------------------------")
 
-dict1_keys = {k:v for (k,v) in Nombre_diccionario_1.items()}
-print(dict1_keys)
-print(input("Continuar?????"))
+print ("{:<12} {:<15} {:<10} {:<10} {:<10} {:<10}".format('clave','Item_1','Item_2','Item_3', 'Item_4', 'Item_5'))
+for clave_primaria, listas_valores_interiores in Nombre_diccionario_1.items():
+	Item_1, Item_2, Item_3, Item_4, Item_5 = listas_valores_interiores;
+	print ("{:<12} {:<15} {:<10} {:<10} {:<10} {:<10}".format(clave_primaria, Item_1, Item_2, Item_3, Item_4, Item_5))
+pausa();limpiar();
 
-for clave_primaria, listas_interiores in Nombre_diccionario_1.items():
-	for items_interiores in listas_interiores :
-		print(clave_primaria,items_interiores)
-print(input("Continuar?????"))
+datos = {clave_primaria:listas_valores_interiores for (clave_primaria,listas_valores_interiores) in Nombre_diccionario_1.items()}
+print(datos)
+pausa();limpiar();
 
-print (len(Nombre_diccionario_1))
-print (Nombre_diccionario_1.items())
-print (Nombre_diccionario_1.keys())
-print (Nombre_diccionario_1.values())
-print(input("Continuar?????"))
+for clave_primaria, listas_valores_interiores in Nombre_diccionario_1.items():
+	for listas_valores_interiores in listas_valores_interiores :
+		print(clave_primaria,listas_valores_interiores)
+pausa();limpiar();
+print ("\n\n\nDatos del diccionario:",Nombre_diccionario_1)
+print ("\nLongitud del diccionario:",len(Nombre_diccionario_1))
+print ("\nItems del diccionario:",Nombre_diccionario_1.items())
+print ("\nLlaves del diccionario:",Nombre_diccionario_1.keys())
+print ("\nValores del diccionario",Nombre_diccionario_1.values())
+pausa();limpiar();
 
 claves_primarias= list(Nombre_diccionario_1.keys())
-print(claves_primarias[0])
+print("\n\n\n",claves_primarias[0])
 for contador in range(5):
-	print("sabes que ",Nombre_diccionario_1[claves_primarias[0]][contador]," trabaja de ",Nombre_diccionario_1[claves_primarias[1]][contador]," y tiene ",Nombre_diccionario_1[claves_primarias[2]][contador]," años.")
+	print("sabes que ",Nombre_diccionario_1[claves_primarias[0]][contador],"\t trabaja de ",Nombre_diccionario_1[claves_primarias[1]][contador],"\t y tiene ",Nombre_diccionario_1[claves_primarias[2]][contador]," años.")
 
 
 nuevo(8);
-# Uso de bucles anillados
+print("Uso de bucles anillados");
 for cont_1 in Nombre_diccionario_1:
-	print ("\n",cont_1 ,end=(" "))
+	print ("\n",cont_1 ,end=("\t"));
 	for cont_2 in Nombre_diccionario_1[cont_1]:
-		print(cont_2 ,end=(" "))
+		print(cont_2 ,end=("\t"));
 print("\n")
-print(input("Continuar?????"))
+pausa();limpiar();
 # Uso de pprint
 import pprint
 pprint.pprint(Nombre_diccionario_1, width=1)
-print(input("Continuar?????"))
+pausa();limpiar();
 # Uso de valor
 for cont_1 in Nombre_diccionario_1:
 	cont_2 = Nombre_diccionario_1[cont_1]
 	print(cont_1,":",cont_2)
-print(input("Continuar?????"))
+pausa();limpiar();
 # Uso de format
 for cont in Nombre_diccionario_1:
 	print("Clave : {} , Valor : {}".format(cont,Nombre_diccionario_1[cont]))
-print(input("Continuar?????"))
+pausa();limpiar();
 # Uso de sorted
 for row in zip(*([key] + (value) for key, value in sorted(Nombre_diccionario_1.items()))):
 	print(*row)
 
 for clave, valor in Nombre_diccionario_1.items():
 	print(clave , ":",valor)
-print(input("Continuar?????"))
+pausa();limpiar();
 # Uso de json
 import json
 print(json.dumps(Nombre_diccionario_1, indent = 4))
-nuevo(12);
+nuevo(9);
 #################################################################
 #Ejercicio_Diccionarios_Ej_013
 import operator
 Weight_details = {'Sam':45, 'Irum':67,'Dolly':80, 'Bela':20}
 sorted_weight = sorted(Weight_details.items(), key=operator.itemgetter(1))
 print(sorted_weight)
-nuevo(13);
+nuevo(10);
 #################################################################
-#Ejercicio_Diccionarios_Ej_014
+#Ejercicio_Diccionarios_Ej_010
 
 Nombre_diccionario_1 = {'Lorca':'Escritor', 'Goya':'Pintor', 'Beethoven':'Musico', 'Freddie Mercury':'Cantante', 'Pablo Picasso':'Pintor', 'Leonardo Da Vinci':'genio total'}
 																	# declara diccionario
@@ -278,48 +289,47 @@ if 'Lorca' in Nombre_diccionario_1:
 print(Nombre_diccionario_1.items())									# obtiene una lista de tuplas clave:valor
 print(Nombre_diccionario_1.keys())									# obtiene una lista de las claves
 print(Nombre_diccionario_1.values())								# obtiene una lista de los valores
-print(input("Continuar?????"))
+pausa();limpiar();
 Nombre_diccionario_1['Lorca'] = 'Poeta'								# añade un nuevo par clave:valor
 print(Nombre_diccionario_1.items())
-print(input("Continuar?????"))
+pausa();limpiar();
 Nombre_diccionario_1['Amenabar'] = 'Cineasta'						# añade un nuevo par clave:valor
 print(Nombre_diccionario_1.items())
-print(input("Continuar?????"))
+pausa();limpiar();
 Nombre_diccionario_1.update({'Caravaggio' : 'Pintor','Salvador Dalí' : 'Pintor','Claude Monet' : 'Pintor'})
 																	# añadir con update()
 print(Nombre_diccionario_1.items())									# obtiene una lista de tuplas clave:valor
-print(input("Continuar?????"))
+pausa();limpiar();
 del Nombre_diccionario_1['Amenabar']								# borra un par clave:valor
 print(Nombre_diccionario_1.items())									# obtiene una lista de tuplas clave:valor
 print(Nombre_diccionario_1.pop('Amenabar', 'Amenabar ya no está'))	# borra par clave:valor
 del Nombre_diccionario_1
-print(input("Continuar?????"))
+pausa();limpiar();
 
 Nombre_diccionario_1 = dict((('Item_0',5), ('Item_1',10),('Item_2',15), ('Item_3',20),('Item_4',25), ('Item_5',30),('Item_6',35), ('Item_7',40),('Item_8',45),('Item_9',50), ('Item_0',55)))
 																						# declara a partir de tupla
 print(Nombre_diccionario_1)
 del Nombre_diccionario_1
-print(input("Continuar?????"))
+pausa();limpiar();
 Nombre_diccionario_1 = dict(Item_0=5, Item_1=10,Item_2=15, Item_3=20,Item_4=25, Item_5=30,Item_6=35, Item_7=40, Item_8=45,Item_9=50, Item_10=55,)
 																						# declara a partir de cadenas simples
 print(Nombre_diccionario_1)
 del Nombre_diccionario_1
-print(input("Continuar?????"))
+pausa();limpiar();
 Nombre_diccionario_1 = dict([(z, z**2) for z in (0,1, 2, 3, 4, 5, 6, 7, 8, 9)])			# declara a partir patrón
 print(Nombre_diccionario_1)
 del Nombre_diccionario_1
-print(input("Continuar?????"))
-
-nuevo(14);
+pausa();limpiar();
+nuevo(11);
 #################################################################
-#Ejercicio_Diccionarios_Ej_15
+#Ejercicio_Diccionarios_Ej_12
 artistas = {'Lorca':'Escritor', 'Goya':'Pintor', 'Beethoven':'Musico', 'Freddie Mercury':'Cantante', 'Pablo Picasso':'Pintor', 'Leonardo Da Vinci':'genio total'}	# diccionario
 Nombre_diccionario_1={}
 for c, v in artistas.items():
 	Nombre_diccionario_1[c] = v
 	print(Nombre_diccionario_1)
 del Nombre_diccionario_1
-print(input("Continuar?????"))
+pausa();limpiar();
 
 paises = ['Chile','España','Francia','Portugal']	# declara lista
 Nombre_diccionario_2={}
@@ -327,7 +337,7 @@ for i, c in enumerate(paises):
 	Nombre_diccionario_2[i] = c						# recorre lista
 	print(Nombre_diccionario_2)
 del Nombre_diccionario_2
-print(input("Continuar?????"))
+pausa();limpiar();
 
 capitales = ['Santiago','Madrid','París','Lisboa']	# declara lista
 paises = ['Chile','España','Francia','Portugal']	# declara lista
@@ -336,6 +346,17 @@ for p, c in zip(paises, capitales):
 	Nombre_diccionario_3[p] = c						# recorre listas
 	print(Nombre_diccionario_3)
 del Nombre_diccionario_3
-nuevo(15,"fin");
+nuevo(12);
 #################################################################
 artistas = {'Lorca':'Escritor', 'Goya':'Pintor', 'Beethoven':'Musico', 'Freddie Mercury':'Cantante', 'Pablo Picasso':'Pintor', 'Leonardo Da Vinci':'genio total'}	# diccionario
+print(artistas)
+print(artistas["Lorca"])
+try:
+	print(artistas["Sabato"])#da error xq no esta
+except Exception as dato_error:
+	print("Ocurrió un error o excepción // Exeception occured:{}".format(dato_error))
+print("Sabato : ",artistas.get("Sabato", "Un grande pero no esta en el dic"))
+
+print("Borges : ",artistas.setdefault("Borges", "Genio Nacional"))
+print(artistas)
+nuevo(13,"fin");

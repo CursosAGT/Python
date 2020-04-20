@@ -2,20 +2,16 @@
 # -*- coding: utf-8 -*-
 # AGT
 # Copyright 2020 Ariel H Garcia Traba <ariel.garcia.traba@gmail.com>
-
-def limpiar():
-	import os
-	if os.name == 'nt':
-		os.system('cls')
-	else:
-		os.system('clear')
+print("#pip install mysql-connector-python")
+#pip install mysql-connector-python
+from Estructura import *
 #módulo: artículos.py
 import mysql.connector
 
 class artículos:
 
 	def abrir(self):
-		conexion=mysql.connector.connect(host="localhost", user="root", passwd="utn", database="bd1")
+		conexion=mysql.connector.connect(host="localhost", user="root", passwd="mysql2020", database="bd1")
 		return conexion
 
 	def alta(self, datos):

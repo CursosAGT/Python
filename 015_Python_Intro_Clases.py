@@ -128,11 +128,11 @@ class Clases_ejemplo:
 		return (en_metodo)
 """)
 class Clases_ejemplo:
-	atributos_A = 1973
-	atributos_M = 9
-	atributos_D = 22
-	def Hacer_Metodo(self):
-		en_metodo = "UTN_2020"
+	atributos_A = 1973#<---------------atributo
+	atributos_M = 9#<------------------atributo
+	atributos_D = 22#<-----------------atributo
+	def Hacer_Metodo(self):#<---------------Metodo
+		en_metodo = "UTN_2020"#<---------------atributo de metodo
 		return (en_metodo)
 print("Desde la 'clases'  imprimo los atributos, aun no hay objetos instanciados")
 print ("Clases_ejemplo.atributos_A",Clases_ejemplo.atributos_A)
@@ -557,7 +557,7 @@ item1 = almacen_2("xx2034yy", "Vaso",15, "Vaso de porcelana 50 cc, color blanco 
 item2 = almacen_2("25cc25cxc", "copa",50, "Copa cristal x 6 unidades, cristal")
 item3 = almacen_2("sad122", "plato",25, "Plato  x 6 unidades, Blanco")
 print(item1)
-limpiar()
+pausa();limpiar();
 """https://docs.hektorprofe.net/python/herencia-en-la-poo/herencia/"""
 print("~~~~~~~~~~~~~~2da parte~~~~~~~~~~~~~~~~~~~~~~")
 prod=[item1,item2]
@@ -640,5 +640,13 @@ nuevo(9,"fin");
 ##################################################################################################################################
 print("""
 aliasing
-"Los objetos tienen individualidad, y múltiples nombres (en muchos ámbitos) pueden vincularse al mismo objeto. Esto se conoce como aliasing en otros lenguajes. Normalmente no se aprecia esto a primera vista en Python, y puede ignorarse sin problemas cuando se maneja tipos básicos inmutables (números, cadenas, tuplas). Sin embargo, el aliasing, o renombrado, tiene un efecto posiblemente sorpresivo sobre la semántica de código Python que involucra objetos mutables como listas, diccionarios, y la mayoría de otros tipos. Esto se usa normalmente para beneficio del programa, ya que los renombres funcionan como punteros en algunos aspectos. Por ejemplo, pasar un objeto es barato ya que la implementación solamente pasa el puntero; y si una función modifica el objeto que fue pasado, el que la llama verá el cambio; esto elimina la necesidad de tener dos formas diferentes de pasar argumentos, como en Pascal
+"Los objetos tienen individualidad, y múltiples nombres (en muchos ámbitos) pueden vincularse al mismo objeto. 
+	Esto se conoce como aliasing en otros lenguajes.
+	Normalmente no se aprecia esto a primera vista en Python, 
+	y puede ignorarse sin problemas cuando se maneja tipos básicos inmutables (números, cadenas, tuplas).
+	Sin embargo, el aliasing, o renombrado, tiene un efecto posiblemente sorpresivo sobre la semántica de código Python
+	que involucra objetos mutables como listas, diccionarios, y la mayoría de otros tipos. 
+	Esto se usa normalmente para beneficio del programa, ya que los renombres funcionan como punteros en algunos aspectos.
+	Por ejemplo, pasar un objeto es barato ya que la implementación solamente pasa el puntero; 
+	y si una función modifica el objeto que fue pasado, el que la llama verá el cambio; esto elimina la necesidad de tener dos formas diferentes de pasar argumentos, como en Pascal
 .""")

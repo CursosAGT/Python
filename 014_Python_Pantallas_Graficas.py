@@ -7,17 +7,12 @@ def Ej_ya_hechos():
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
 ║                                                                             ║
-║                                                                             ║
-║              Unidad 5 - MySQL, Parte 1                                      ║
-║                 * INSERT, UPDATE, DELETE, SELECT                            ║
-║                 * FECHAS Y HORAS                                            ║
-║                 * %LIKE%                                                    ║
-║                 * JOIN                                                      ║
+║                          Pantalla Grafica Parte                             ║
 ║                                                                             ║
 ╠═════════════════════════════════════════════════════════════════════════════╣
 ║                                                                             ║
-║                           Python List/Array Methods                         ║
-║                          ---------------------------                        ║
+║                                Python tkinter                               ║
+║                               ----------------                              ║
 ║                                                                             ║
 ║       Operator     Description                                              ║
 ║                                                                             ║
@@ -147,7 +142,6 @@ print("""
 pip install pillow
 pip install flask
 
-
 https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html
 https://www.youtube.com/watch?v=CppgV8inf7g&pbjreload=10
 https://python-para-impacientes.blogspot.com/2015/12/tkinter-interfaces-graficas-en-python-i.html
@@ -170,7 +164,7 @@ print ("https://www.tutorialspoint.com/python3/tk_button.htm")
 print ("/")
 
 
-def iniciar_pantalla_raiz():
+def pantalla_raiz():
 	pantalla_raiz=Tk()
 	pantalla_raiz.title("Mi primer pantalla")
 	pantalla_raiz.geometry("640x480")
@@ -179,7 +173,7 @@ def iniciar_pantalla_raiz():
 	pantalla_raiz.mainloop
 var = input ("inicio pantalla grafica '1'(S/N)")
 if var.upper() =="S":
-	iniciar_pantalla_raiz()
+	pantalla_raiz()
 nuevo(1);
 #################################################################
 #Clase_P_graf_02
@@ -330,6 +324,7 @@ if var.upper() =="S":
 	etiquieta= input ("ingrese su nombre:")
 	iniciar4_pantalla_raiz()
 nuevo(4);
+
 #################################################################
 #Clase_P_graf_05
 from tkinter import *
@@ -349,16 +344,19 @@ class C5_pantalla_raiz():
 			etiqueta.config(text="hola "+str(nombre)+" ingresa tu usuario")
 		texto_ingreso =""
 		pantalla_raiz = Tk()
-		pantalla_raiz.config(width="600", height="650")
-		pantalla_raiz.configure(bg = 'beige')
-		pantalla_raiz.title('Aplicación')
+
+		pantalla_raiz.geometry("500x500")
+		pantalla_raiz.configure(bg = "white")
+		pantalla_raiz.title("UTN 2020 app")
+
+		pantalla_raiz.title("Aplicacion grafica en python")
 		frame_pantalla_raiz=Frame(pantalla_raiz)
-		frame_pantalla_raiz = Frame(pantalla_raiz, width=640,height=480)
-		frame_pantalla_raiz.grid(column=0, row=0,padx=(5,5),pady=(10,10))
+		frame_pantalla_raiz = Frame(pantalla_raiz, width=200,height=200)
+		frame_pantalla_raiz.grid(column=0, row=0,padx=(20,20),pady=(20,20))
 		frame_pantalla_raiz.columnconfigure(0,weight=1)
 		frame_pantalla_raiz.rowconfigure(0,weight=1)
 		frame_pantalla_raiz.config(bg = 'red')
-		frame_pantalla_raiz.pack(fill="both", expand="True", anchor="center")
+		frame_pantalla_raiz.pack(fill="both", expand="False", anchor="center")
 		etiqueta = Label(frame_pantalla_raiz,text="Ingrese su nombre : ")
 		etiqueta.grid(column=1,row=2)
 		ingreso=Entry(frame_pantalla_raiz,width=15,textvariable=texto_ingreso)
@@ -368,6 +366,24 @@ class C5_pantalla_raiz():
 		btn1=Button(frame_pantalla_raiz, text='salir',command=pantalla_raiz.destroy)
 		btn1.grid(column=2,row=4)
 
+
+		img = PhotoImage(file="brazo_robotico.png")
+		widget = Label(pantalla_raiz, image=img).pack()
+
+		# Define un botón en la parte inferior de la frame_pantalla_raiz
+		# que cuando sea presionado hará que termine el programa.
+		# El primer parámetro indica el nombre de la frame_pantalla_raiz 'raiz'
+		# donde se ubicará el botón
+		ttk.Button(pantalla_raiz, text='Salir', command=pantalla_raiz.destroy).pack(side=BOTTOM)
+		ttk.Button(pantalla_raiz, text='terminar programa', command=quit).pack(side=BOTTOM)
+
+		# Después de definir la frame_pantalla_raiz principal y un widget botón
+		# la siguiente línea hará que cuando se ejecute el programa
+		# construya y muestre la frame_pantalla_raiz, quedando a la espera de
+		# que alguna persona interactúe con ella.
+
+		# Si la persona presiona sobre el botón Cerrar 'X', o bien,
+		# sobre el botón 'Salir' el programa llegará a su fin.
 		pantalla_raiz.mainloop()
 def iniciar5_pantalla_raiz():
 	llamar=C5_pantalla_raiz()
@@ -633,7 +649,7 @@ if var.upper() =="S":iniciar14_pantalla_raiz()
 nuevo(14);
 #################################################################
 #Clase_P_graf_015
-
+'''
 from tkinter import *
 
 # pip install pillow
@@ -660,6 +676,8 @@ if var.upper() =="S":
 	root.geometry("400x300")
 	root.mainloop()
 nuevo(15);
+
+
 #################################################################
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
@@ -695,3 +713,4 @@ https://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-wind
 https://www.youtube.com/watch?v=K_7viALbzqg
 https://www.youtube.com/watch?v=N5vscPTWKOk
 """)
+'''

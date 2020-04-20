@@ -1,16 +1,4 @@
-from Estructura import *
-nuevo(0,"inicio");
-#################################################################
-def Ej_ya_hechos():
-	#Con tab colocaremos aqui las precticas hechas
-	pass
-
-limpiar();
-#################################################################
-#Ejercicio_Print_01
-print ("linea 1");
-print ("linea 2");
-print ("linea 3");
+from Estructura import * 
 print ("--------");
 print ()
 print ("c:\nicolas");
@@ -32,11 +20,11 @@ nuevo(2);
 #Ejercicio_Print_03
 cadena = "es hora de trabajar grupo 2020-UTN"
 print ("La Cadena original es : ", cadena);
-print(input("continuar?"));
+input("continuar?");
 print(" print ('cadena',end=''); el, end=' ' genera que al final no se genere un final de linea por lo que siguiente printe sera seguido")
 print ("La Cadena original es : ", cadena, end="");
 print (cadena);
-print(input("continuar?"));
+pausa();
 # multiples lineas
 print ("# multiples lineas ")
 cadena2 = '''...Es hora
@@ -44,7 +32,7 @@ cadena2 = '''...Es hora
             ...UTN...'''
 print("Cadena 2 multilinea ", end="");
 print(cadena2);
-print(input("continuar?"));
+pausa();
 print ("La Cadena original es : ", cadena, "");
 # Impresion del primir caracter
 print("El primer caracter de la Cadena es: ", end="");
@@ -55,7 +43,7 @@ print(cadena[-1]);
 # Impresion del 3er al 12do caracter
 print("Sector de la cadena ubicada entre los caracteres 3-19: ", end="");
 print(cadena[3:19]);
-print(input("continuar?"));
+pausa();
 print ("Rellena con 0 en un sector de 40 caracteres");
 print(cadena.zfill(40))
 # Impresion del Cadena alinecion centrada
@@ -65,14 +53,14 @@ print (cadena.center(40), "");
 # Impresion del Cadena alinecion centrada con numerales
 print ("Alinecion centrada con agregando #: ", end="");
 print (cadena.center(40, '#'));
-print(input("continuar?"));
+pausa();
 # Impresion del Cadena alinecion izquierda
 print ("Alinecion izquierda de la Cadena : ", end="");
 print (cadena.ljust(40), "");
 # Impresion del Cadena alinecion izquierda con numerales
 print ("Alinecion izquierda de la Cadena adregando #: ", end="");
 print (cadena.ljust(40, '#'));
-print(input("continuar?"));
+pausa();
 # Impresion del Cadena alinecion derecha
 print ("Alinecion derecha de la Cadena : ", end="");
 print (cadena.rjust(40), "");
@@ -112,7 +100,7 @@ print("""
 ║                                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
 """);
-
+pausa()
 limpiar()
 
 
@@ -129,6 +117,7 @@ print("\033[;36m"+"Texto normal de color cian")
 print("\033[4;35;47m"+"Texto subr morado sobre blanco"+'\033[0;m')
 print("\033[4;35m"+"Texto normal subr color morado"+'\033[0;m')
 print ("\n\ntabla con todos los formatos posibles, recorriendo y cambiando estilos y colores:")
+pausa();limpiar();
 def construye_tabla_formatos():
     for estilo in range(8):
         for color_texto    in range(30,38):
@@ -153,6 +142,7 @@ def ej001_4():
 	print (var_entera_3);
 	print (var_entera_1*var_entera_3-var_entera_2);
 	print ((var_entera_1*var_entera_3+1)/var_entera_2);
+ej001_4()
 nuevo(4);
 #################################################################
 #Ejercicio_Print_05

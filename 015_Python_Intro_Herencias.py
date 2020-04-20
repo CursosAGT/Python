@@ -225,7 +225,6 @@ objeto_2.mostrar()
 nuevo(3);
 ##################################################################################################################################
 #Ejercicio_Clases_04
-"""
 class Humanoide(object):#				clases padre
 	def __init__(self):#					Constructor de estado inicial
 		self.__cabeza=1#           			estado inicial en la clase padre
@@ -334,6 +333,7 @@ ferengi.estados("ferengi",True);
 trill.estados("trill",False);
 romuliano.estados("romuliano",True);
 nuevo(3);
+"""
 ##################################################################################################################################
 """
 print("Herencias multiples, problemas a tener en cuenta")

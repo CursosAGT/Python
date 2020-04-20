@@ -78,7 +78,9 @@ https://pymotw.com/3/sched/
 https://python-para-impacientes.blogspot.com/2017/03/
 """);
 
-limpiar();
+
+pausa();
+pausa();limpiar();
 #################################################################
 print("""
 sched — Timed Event Scheduler
@@ -152,7 +154,9 @@ Después de definir los eventos hay que poner en marcha el programador con el m�
 Programar eventos para ejecutar en un momento determinado
 En el siguiente ejemplo se declara un programador con dos eventos para ejecutar una tarea 1 segundo después de poner en marcha el programador y la misma tarea cinco segundos después. El programador se crea con la función time.time() que devuelve el tiempo expresado en segundos. (Cualquier fecha-hora se puede expresar en segundos y viceversa. Ver: El módulo time)
 """);
-limpiar();
+
+pausa();
+pausa();limpiar();
 #################################################################
 #Clase_Scheduler_Ej_01
 import schedule

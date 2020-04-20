@@ -41,6 +41,7 @@ finally:
 	archivo.close()
 """)
 nuevo(0);
+
 #################################################################
 #Clase_Errores_Ej_001
 print("Ingresa los datos con errores Ej números en string")
@@ -48,7 +49,7 @@ try:
 	maximo = int(input("ingrese la cantidad de números :"));
 except:
 	print ("ha ocurrido un Error. pero sigo con un valor = 10");
-	maximo = 10
+	maximo = int(input("ingrese la cantidad de números :"));
 if maximo>0:
 	def numeros_pares(maximo):
 		contador = 1
@@ -68,11 +69,15 @@ try:
 	print(x/y)##nunca dividirás por cero
 	""")
 	x = 10
-	y = 0
+	y = input("Introduzca un error 0 -cerro y xx string")
 	print(x/y)##nunca dividirás por cero
+	
 except Exception as dato_error:
-	print("Ocurrió un error o excepción // Exeception occured:{}".format(dato_error))
+	print("except se hace solo cuando hay un error")
+	#if dato_error ==......
+	print(f"Ocurrió un error o excepción // Exeception occured:{dato_error}");
 finally:
+	print("Finally se hace siempre")
 	x = 10
 	y = 2
 	print(x/y)
@@ -90,9 +95,14 @@ while True:
 		""")
 		valor1=float(input("valor 1 : "));
 		valor2=float(input("valor 2 : "));
+		#si llegue aqui, es que no hubo error - no hubo excepcio- ende puse 2 numeros, pase los input
 		break
 	except ValueError:
-		print("Error. solo nomeros");
+		print("Error. ingrese solo numeros");#no llego al break xq hubo un error, sigo en el bucle
+
+###############################################################################
+#                        hacemos una calculadora                              #
+###############################################################################
 def resultado_suma(valor_1,valor_2):
 	return valor_1+valor_2
 def resultado_resta(valor_1,valor_2):
@@ -139,7 +149,7 @@ print ("resultado resto : "+str(resultado_resto(valor1,valor2)));
 nuevo(3);
 #################################################################
 #Clase_Errores_Ej_004
-from Python_Metodos_propios import *#<-------------------------------------------------------------via archivo externo
+from Python_Metodos_propios import *#<-----------------via archivo externo
 print("Ingrese valores numéricos para funcionar y no numéricos par generar un error");
 while True:
 	try:
@@ -152,8 +162,6 @@ while True:
 		break
 	except ValueError:
 		print("Error. solo nomeros");
-
-
 print ("resultado suma : "+str(resultado_suma_metodo(valor1,valor2)))
 print ("resultado resta : "+str(resultado_resta_metodo(valor1,valor2)))
 print ("resultado multiplicación : "+str(resultado_multiplica_metodo(valor1,valor2)))
@@ -166,13 +174,15 @@ print ("resultado resto : "+str(resultado_resto_metodo(valor1,valor2)))
 nuevo(4);
 #################################################################
 #Clase_Errores_Ej_004
-lista = [1, 2, 3, 4, 5, 6, 7, 8]
-iterador = iter(lista)
+lista = [1, 2, 3, 4, 5, 6, 7, 8] 
+iterador = iter(lista)#este error no es de un usuario, sino del programador y lo espera. Es parte del programa
 try:
 	while True:
 		print("DATO DEL ITERADOR",iterador.__next__())
 except StopIteration:
 	print("Se ha alcanzado el final de la lista")
+	#termine a otra cosa.......sigo con los datos que tome de lista
+
 nuevo(4);
 #################################################################
 #Clase_Errores_Ej_005
@@ -196,7 +206,7 @@ while True:
 		mes=int(input("Mes (en numeros):"))
 		break
 	except ValueError:
-		print("Error. solo nomeros");
+		print("Error. solo numeros");
 calendario = calendar.month(año, mes)
 print(f"Verifique por favor:\n {calendario}")
 nuevo(7);
