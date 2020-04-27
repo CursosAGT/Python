@@ -9,7 +9,10 @@ def Ej_ya_hechos(x):
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
 ║                                                                             ║
-║                                       CVS                                   ║
+║                                  CVS                                        ║
+║                       Abre tu planilla de calculo                           ║
+║    Ve el archivo desde_plan_calculo.csv  modifica algun dato (no nombre)    ║
+║    y guardalo. Continia con este archivo.                                   ║
 ║                                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
 aguarde""");
@@ -35,16 +38,26 @@ import csv
 archivo = open('salida_a_csv2.csv', 'w')
 with archivo:
 	writer = csv.writer(archivo)
-	writer.writerows([{'Grado': 'B', 'Nombre': 'Alex', 'Apellido': 'Brian'},
-					  {'Grado': 'A', 'Nombre': 'Rachael','Apellido': 'Rodriguez'},
-					  {'Grado': 'C', 'Nombre': 'Tom', 'Apellido': 'smith'},
-					  {'Grado': 'B', 'Nombre': 'Jane', 'Apellido': 'Oscar'},
-					  {'Grado': 'A', 'Nombre': 'Kennzy', 'Apellido': 'Tim'}])
-print("grabamos el archivo 'salida_a_csv2.csv' ver en el directorio y abrir con la planilla de calculo")
-limpiar()
+	writer.writerows([{ 'B', 'Alex', 'Brian'},
+					  { 'A', 'Rachael', 'Rodriguez'},
+					  { 'C', 'Tom', 'smith'},
+					  { 'B', 'Jane', 'Oscar'},
+					  { 'A', 'Kennzy', 'Tim'}])
+print("""
+╔═════════════════════════════════════════════════════════════════════════════╗
+║    Grabamos el archivo salida_a_csv2.csv                                    ║
+║                       Abrelo tu planilla de calculo                         ║
+║    Ve el archivo salida_a_csv2.csv  y compaalo con salida de python         ║
+║                                                                             ║
+╚═════════════════════════════════════════════════════════════════════════════╝
+aguarde""");
+
+
+
+pausa()
 archivo = open('salida_a_csv3.csv', 'w')
 with archivo:
-	fieldnames = ['Nombre', 'Apellido', 'Grado']
+	fieldnames = ['Grado','Nombre', 'Apellido', 'Grado']
 	writer = csv.DictWriter(archivo, fieldnames=fieldnames)
 	writer.writeheader()
 	writer.writerows([{'Grado': 'B', 'Nombre': 'Alex', 'Apellido': 'Brian'},
@@ -52,14 +65,40 @@ with archivo:
 					  {'Grado': 'C', 'Nombre': 'Tom', 'Apellido': 'smith'},
 					  {'Grado': 'B', 'Nombre': 'Jane', 'Apellido': 'Oscar'},
 					  {'Grado': 'A', 'Nombre': 'Kennzy', 'Apellido': 'Tim'}])
-print("grabamos el archivo 'salida_a_csv3.csv' ver en el directorio y abrir con la planilla de calculo")
+print("""
+╔═════════════════════════════════════════════════════════════════════════════╗
+║    Grabamos el archivo salida_a_csv3.csv                                    ║
+║                       Abrelo tu planilla de calculo                         ║
+║    Ve el archivo salida_a_csv3.csv  y compaalo con salida de python         ║
+║                                                                             ║
+╚═════════════════════════════════════════════════════════════════════════════╝
+aguarde""");
 nuevo(3);
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
 ║                                                                             ║
+║                      Ya importamos y exportamos a                           ║
+║                         la planilla de calculo                              ║
+║                                                                             ║
+║                      AHORA JUGUEMOS CON LOS DATOS                           ║
+║                                                                             ║
+║   Necesitamos instalar varias librerias                                     ║
+║                  pip install pandas                                         ║
+║                  pip install -U numpy                                       ║
+║                  pip install -U matplotlib                                  ║
+║                  pip install plotly                                         ║
+║                  pip install scipy                                          ║
+║                                                                             ║
+╚═════════════════════════════════════════════════════════════════════════════╝
+\n\n
+╔═════════════════════════════════════════════════════════════════════════════╗
+║                                                                             ║
 ║                                     Pandas                                  ║
-║          https://www.doctormetrics.com/importando-datos-en-python/          ║
-║   https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html     ║
+║  https://www.doctormetrics.com/importando-datos-en-python/                  ║
+║  https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html      ║
+║  https://pandas.pydata.org/docs/getting_started/index.html#getting-started  ║
+║                            pip install pandas                               ║
+║                                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
 aguarde....
 Buscando las cabeceras "nombre de columnas"
@@ -67,45 +106,78 @@ Buscando las cabeceras "nombre de columnas"
 
 import pandas as pd
 df = pd.read_csv('desde_plan_calculo.csv')
+
 print("Abro el archivo 'desde_plan_calculo.csv'" )
 print("dataframe = df")
 for Columna in df:
 	print(Columna)
-limpiar()
+pausa()
+
 print("Imprimo la columna Dato1")
 print(df['Dato1'])
-limpiar()
+pausa()
 
-print("Imprimo la columna Dato1 x Dato3")
-print(df)
+print("Invierto la columna Dato1 x Dato3")
+print("Antes:\n",df)
+
 df[['Dato3','Dato1']]=df[['Dato1','Dato3']]
-print(df)
-limpiar()
+print("Despues:\n",df)
+pausa()
 
 print("original\n",df)
+print(".loc if you want to label index.")
+
 print("Imprimo los index 0 a 5 de Dato2")
 print(df.loc[:5])#gets Columnas (or columns) with particular labels from the index
-limpiar()
+pausa()
 print(df.loc[8:15])#c gets Columnas (or columns) at particular positions in the index (so it only takes integers).
-limpiar()
+pausa()
 print(df.loc[5:])
-limpiar()
+pausa()
 print(df.loc[df.index[[0,2,3,4,5]],'Dato2'])
-limpiar()
+pausa()
+print("After index slicing: print(df.loc[10:20, 'Dato1'] )") 
+print(df.loc[10:20, 'Dato1'] )
+pausa()
+print("La estructura es [fila Inicial : fila Final, columna inicial : columna final] -df.loc[FI:FF,CI:CF ]")
+print(df.loc[:, 'DatoALF'])
+pausa()
+print(df.loc[:,'Dato1':'Dato5'])
+pausa()
+print("La estructura es [[Lista de filas],[lista de columnas]] -df.loc[[listaFila],[ListaColumnas]]")
+print(df.loc[[1,2,3,4,5,6,7,8,9],])
+pausa()
+
+print(df.loc[:,['Dato1', 'Dato4', 'Dato2']])
+pausa()
+
+print(df.loc[:, 'DatoALF'])
+print(".iloc if you want to positionally index.\n")
+#print(df.loc[df.index[[:,5] )
+print(df.iloc[:,[4, 5, 6]])
+pausa()
+
+print("print(df.iloc[:,6])")
+print(df.iloc[:,6])
+pausa()
+print(df.iloc[:, [2,4]])
+pausa()
+print(df.iloc[:,2])
+pausa()
+print("Imprimo la 5ta columna Datos >1000")
+print(df.loc[df.iloc[:,2]>1000])
+pausa();
 print("Imprimo criterios lambda")
 criterio = df['DatoALF'].map(lambda x: x.startswith('b'))
 print(criterio)
-limpiar()
+pausa()
 
 print("Imprimo la columna Dato4 ordenada ascendente")
 print(df.sort_values(by='Dato4'))
-limpiar()
+pausa()
 print("Imprimo la columna Dato4 ordenada descendente")
 print(df.sort_values(by='Dato4',ascending=False))
-limpiar()
-print("Imprimo la 5ta columna Datos >50 %")
-print(df[df.ix[:,5]>50])
-limpiar()
+pausa()
 print("utilizamos los métodos head, que sería cabeza, para mostrar las primeras filas del marco de datos.")
 print(df.head())
 print("utilizamos tail o cola, que muestra las filas inferiores de los datos.")
@@ -136,7 +208,7 @@ import plotly.express as px
 print("importo el archivo desde un sitio web")
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_apple_stock.csv')
 print("Desde la web\n",df.head())
-print("Abre el navegador web")
+print("Abriendo el navegador web")
 fig = px.line(df, x = 'AAPL_x', y = 'AAPL_y', title='Apple Share Prices over time (2014)')
 fig.show()
 

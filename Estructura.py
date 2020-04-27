@@ -10,7 +10,8 @@ def limpiar():
 	else:
 		os.system('clear');
 def pausa():
-	temp=input("Presione una tecla para continuar")
+	temp=input("\tPresione una tecla para continuar")
+	print("\n")
 def nuevo(numero,estado=None):
 	if estado=="inicio":#▒ ▓ ┌┐┤│├└ ┘┴ ┬ ─ ┼╔ ╗╠ ╬ ╣║╚ ╝╩ ╦ ═¤
 		print("""\n
@@ -178,8 +179,7 @@ def nuevo(numero,estado=None):
 			limpiar()
 			print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			print(f"\n\t\tFin de la práctica")
-
+"""
 if __name__ == "__main__":
-    nuevo(0,"inicio")
-
-
+	nuevo(0,"inicio")
+"""

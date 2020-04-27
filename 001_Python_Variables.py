@@ -17,11 +17,6 @@ print("""
 ║                                    Variables                                ║
 ║                            -----------------------                          ║
 ║                                                                             ║
-║                            Crear archivos con extencion                     ║
-║                                                        .py                  ║
-║                                                        .pyc                 ║
-║                                                        .c                   ║
-║                                                                             ║
 ║                    and, as, assert, break, class, continue                  ║
 ║                    def, del, elif, else, except, exec                       ║
 ║                    finally, for, from, global, if, import                   ║
@@ -48,7 +43,6 @@ print("""
 ║                 escribir un texto                                           ║
 ║                                                                             ║
 ║                 texto desde una variable                                    ║
-║                                                                             ║
 ║                                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
 """);

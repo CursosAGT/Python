@@ -7,7 +7,7 @@ def Ej_ya_hechos():
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
 ║                                                                             ║
-║                                  Unidad 4 - Listas, Tuplas y Diccionarios   ║
+║            Arrays                                                           ║
 ║              Listas                                                         ║
 ║                 * Índices                                                   ║
 ║                 * Recorrer listas                                           ║
@@ -32,7 +32,7 @@ print("""
 ║          clear()   Removes all the elements from the list                   ║
 ║          copy()    Returns a copy of the list                               ║
 ║          count()   Returns the number of elements with the specified value  ║
-║          extend()  Add the elements of a list (or any iterable);, to the end ║
+║          extend()  Add the elements of a list (or any iterable);, to the end║
 ║                    of the current list                                      ║
 ║          index()   Returns the index of the first element with the specified║
 ║                    value                                                    ║
@@ -42,66 +42,121 @@ print("""
 ║          reverse() Reverses the order of the list                           ║
 ║          sort()    Sorts the list                                           ║
 ║                                                                             ║
-╠═════════════════════════════════════════════════════════════════════════════╣
-║                                                                             ║
-║                                    Listas                                   ║
-║                                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
 
 """);
 pausa();limpiar();
 nuevo(0,"inicio");
+
+
 #################################################################
 #Ej_Arrays_Ej_001
+print("\nIngresar 20 datos con input en un bucle.\n imprimir los datos antes guardados con un segundo bucle"); 
+nuevo(2);
+
+#################################################################
+#Ej_Arrays_Ej_002
+print("""\nHas con 1 bucle la tabla pitagórica
+en una primera parte solo carga los datos guardandolos en 10 arrays-->
+\t\ttabla_del_0, tabla_del_1 tabla_del_2 ...tabla_del_9
+En una segunda parte imprime los arrays ya cargados 
+ || 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+-------------------------------------------
+0|| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+1|| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+2|| 0 | 2 | 4 | 6 | 8 |10 |12 |14 |16 |18 |
+3|| 0 | 3 | 6 | 9 |12 |15 |18 |21 |24 |27 |
+4|| 0 | 4 | 8 |12 |16 |20 |24 |28 |32 |36 |
+5|| 0 | 5 |10 |15 |20 |25 |30 |35 |40 |45 |
+6|| 0 | 6 |12 |18 |24 |30 |36 |42 |48 |54 |
+7|| 0 | 7 |14 |21 |28 |35 |42 |49 |56 |63 |
+8|| 0 | 8 |16 |24 |32 |40 |48 |56 |64 |72 |
+9|| 0 | 9 |18 |27 |36 |45 |54 |63 |72 |81 |""");
+nuevo(3);
+#################################################################
+#Ej_Arrays_Ej_001
+print("""Modificando el anterior. Has con 2 bucles anillados la tabla pitagórica"
+en una primera parte solo carga los datos guardandolos en una matriz de 10 x 10"
+En una segunda parte imprime la matris ya cargada""");
+nuevo(4);
+#################################################################
+#Ej_Arrays_Ej_001
+print("""En una primera parte con un bucle.\n\tingresa los nombres, apellidos y telefonos de 5 personas en 3 arrays "
+En una segunda parte ingresa un nombre y verigica que este en el array de nombres"
+\tSi el nombre pertenece a los ingresado imprime 'Es parte del grupo' "
+\timprime su apellido y telefono"
+\t\t(nota usa como referencia la posicion del index en donde lo encontastes el nombre)""");
+nuevo(5);
+
+print("""Modificando el anterior. Haslo con una matriz 5 x 3""");
+
+
+print("""
+╔═════════════════════════════════════════════════════════════════════════════╗
+║                                                                             ║
+║              Listas                                                         ║
+║                 * Índices                                                   ║
+║                 * Recorrer listas                                           ║
+║              Tuplas                                                         ║
+║                 * Índices                                                   ║
+║                 * Recorrer Tuplas                                           ║
+║              Diccionarios                                                   ║
+║                 * Funcionamiento de diccionarios                            ║
+║                 * Estructuras tipo JSON                                     ║
+║              Set                                                            ║
+║                                                                             ║
+║                                                                             ║
+╚═════════════════════════════════════════════════════════════════════════════╝
+
+""");
+#################################################################
+#Ej_Arrays_Ej_006
 print('Array Nombres = "Juan,"Juana","Andrea","Andres","Martin","Martina","Joaquin","Julia","Julio","Facundo"');
 print("Ingresa un nombre, ponlo en capitalize ");
 print ("Busco si el dato 'nombre' esta en mi Array con print");
 print ('print("Nombre" in Nombres);');
-nuevo(1);
+nuevo(6);
 #################################################################
-#Ej_Arrays_Ej_002
+#Ej_Arrays_Ej_007
 print("Modifica el anterior:");
 print("Busco si el dato 'nombre' esta en mi Array con print");
 print("Ubicar la posicion de 'Nombre' en el index" );
 print('print(Nombres.index("Nombre");');
 print("Muestra en pantalla");
-nuevo(2);
+nuevo(7);
 
 #################################################################
-#Ej_Arrays_Ej_003
+#Ej_Arrays_Ej_008
 print("Modifica el anterior:");
 print("Ingresa un nombre, ponlo en capitalize ");
 print("remuevelo del array");
 print('Nombres.remove("Nombre");');
 print("Muestra en pantalla");
-nuevo(3);
+nuevo(8);
 
 #################################################################
-#Ej_Arrays_Ej_004
+#Ej_Arrays_Ej_009
 print("Modifica el anterior:");
 print("Busco si el dato 'nombre' esta en mi Array con if");
 print("si no se encuentra ponlo al final");
 print("Muestra en pantalla");
-nuevo(4);
+nuevo(9);
 #################################################################
-#Ej_Arrays_Ej_005
+#Ej_Arrays_Ej_010
 print("Modifica el anterior:");
 print("Ordena el array alfabeticamente");
 print("Muestra en pantalla");
-nuevo(5);
-
+nuevo(10);
 #################################################################
-#Ej_Arrays_Ej_006
+#Ej_Arrays_Ej_011
 print("Modifica el anterior:");
 print("Ordena el array alfabeticamente");
 print("Verifica si hay iguales");
 print("Muestra en pantalla");
-nuevo(6);
-
+nuevo(11);
 #################################################################
-#Ej_Arrays_Ej_007
+#Ej_Arrays_Ej_012
 print ("""
-
 Función map()
 -------------
 La función de orden superior map() aplica una función a una lista de datos y devuelve un iterador que contiene todos los resultados para los elementos de la lista.
@@ -111,7 +166,6 @@ La lista_VALORES contiene una lista de datos numéricos. Con map(cuadrado, lista
 """
 Ejemplo
 
-
 def cuadrado(numero);:
 	return numero ** 2
 lista_VALORES = [-2, 4, -6, 8]
@@ -120,15 +174,14 @@ print(lista_CUADRADOS);  # Muestra elementos de la lista
 """
 print("Genera una array de 50 elementos con valores de {0 a 99} a partir de una funcion random (import random) - [random.randint(0, 99)]");
 print("con la funcion anterior calcula el cuadrado y el cubo de cada numero del array random")
-nuevo(7);
-
+nuevo(12);
 #################################################################
-#Ej_Arrays_Ej_008
+#Ej_Arrays_Ej_013
 """
 Ejemplo:
 from collections import Counter
 
-def comparar(a,b);:
+def comparar(a,b):
 	resultado = Counter(a);==Counter(b);
 	return resultado;
 	
@@ -149,17 +202,17 @@ print("Modifica el anterior:");
 print("Genera dos array de 10 elementos con valores de {0 a 99} a partir de una funcion random (import random) - [random.randint(0, 99)]");
 print("compara (from collections import Counter) ambos arrays randoms para ver cuantos resultados se repitieron ")
 
-nuevo(8);
+nuevo(13);
 #################################################################
-#Ej_Arrays_Ej_009
+#Ej_Arrays_Ej_014
 print("Modifica el anterior:");
 
 print("Haz el mismo ejercicio 10 veces con arrays de 10, 20, 30, 40, 50, 60, 70, 80, 90 y 100 elementos ");
 print("Guarda la cantidad de elementos que se repiten cada vez, saca un promedio e imprime la tabla de cantidad de repeticiones / cantidad de elementos en el array"); 
-nuevo(9);
+nuevo(14);
 
 #################################################################
-#Ej_Arrays_Ej_010
+#Ej_Arrays_Ej_015
 """
 Ejemplo:
 
@@ -192,59 +245,59 @@ haz un diccionario con los siguientes datos:
         Star Trek: Discovery (2017 -2020)
 """)
 print("Imprime el diccionario de modo que quede con una estructura similar a la muestra")
-nuevo(10);
+nuevo(15);
 #################################################################
-#Ej_Arrays_Ej_011
+#Ej_Arrays_Ej_016
 print('Array Nombres = "Juan,"Juana","Andrea","Andres","Martin","Martina","Joaquin","Julia","Julio","Facundo"');
 print("Genera un bucle que recorra el array");
 print("Imprime cada dato del array Nombre.");
 print("Ingresa y genera un array Apellidos donde coloques los apellidos de los Nombres ");
-nuevo(11);
+nuevo(16);
 #################################################################
-#Ej_Arrays_Ej_012
+#Ej_Arrays_Ej_017
 print("Modifica el anterior:");
 print("Imprime juntos los valores de los Array Nombres y Apellidos ");
 print("Ingresa en otro array el telefono (como string ya que lleva un - y no debe restarse);");
-nuevo(12);
+nuevo(17);
 #################################################################
-#Ej_Arrays_Ej_013
+#Ej_Arrays_Ej_018
 print("Modifica el anterior:");
 print("junta los Array Nombres y Apellidos en un diccionario - Clave Apellido y Valor Nombre "); 
 print("Graba el array en un archivo Json o pickle"); 
 
-nuevo(13);
+nuevo(18);
 #################################################################
-#Ej_Arrays_Ej_014
+#Ej_Arrays_Ej_019
 print("Modifica el anterior:");
 print("Lee el archivo json o pickle");
 print("Imprimelos en forma de tabla"); 
 print("Genera un diccionario con clave=apellido, valor=lista de[ Nombre, Telefono=lista[casa, cel, otro], Direccion, Email[opcion mas de uno] ]"); 
 print("Graba el array en un archivo Json o pickle"); 
-nuevo(14);
+nuevo(19);
 #################################################################
-#Ej_Arrays_Ej_015
+#Ej_Arrays_Ej_020
 print("Modifica el anterior:");
 print("Lee el archivo json o pickle");
 print("Genera un menu donde puedas buscar por clave o por valor - (Apellido, nombre, direccion, email); ");
-nuevo(15);
+nuevo(20);
 
 #################################################################
-#Ej_Arrays_Ej_016
+#Ej_Arrays_Ej_021
 print("Modifica el anterior:");
 print("Lee el archivo json o pickle");
 print("Genera un menu donde puedas buscar por clave o por valor - (Apellido, nombre, direccion, email); ");
 print("Agregar Borrar, Modificar y Grabar en el archivo JSON o Pickle");
-nuevo(16);
+nuevo(21);
 
 #################################################################
-#Ej_Arrays_Ej_017
+#Ej_Arrays_Ej_022
 print("Modifica el anterior:");
 print("Lee el archivo json o pickle");
 print("Genera una copia de seguridad con los datos antes de modificarlos ");
 print("y graba lo nuevo  en el archivo JSON o Pickle de siempre");
-nuevo(17);
+nuevo(22);
 #################################################################
-#Ej_Arrays_Ej_018
+#Ej_Arrays_Ej_023
 print ("""
 Comprensión de listas
 ----------------------
@@ -254,22 +307,19 @@ lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print("Modifica el anterior:");
 cubos = [valor ** 3 for valor in lista]
 print("Cambia la variable cubo por una lista con 'list' ")
-nuevo(18);
+nuevo(23);
 
 #################################################################
-#Ej_Arrays_Ej_019
+#Ej_Arrays_Ej_024
 numeros = [135, 154, 180, 193, 210]
 divisiblespor3 = [valor for valor in numeros if valor % 3.0 == 0]
 # Muestra lista con los números divisibles por 3
 print(divisiblespor3);
 print("Cambia la variable divisiblespor3 por un array no modificable")
-
-
-
-nuevo(19);
+nuevo(24);
 
 #################################################################
-#Ej_Arrays_Ej_020
+#Ej_Arrays_Ej_025
 # Define función devuelve el inverso de un número
 def funcion(x):
 	result= 1/x;
@@ -280,4 +330,4 @@ print([funcion(i) for i in lista]);
 print("Reemplaza la funcion 'result=1/x;' con la funcion del resto 'result = x % 2;'"); 
 print("(para comprobar si es par o impar")
 print("Diccionario con 'dic' uniendo la lista original y la del resultado de los restos")
-nuevo(20,"fin");
+nuevo(25,"fin");
