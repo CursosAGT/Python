@@ -87,9 +87,39 @@ print("""
 ║                                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
 """)
-print("#pip install mysql-connector-python")
+
+print("""
+
+Instala mysql desde
+	https://dev.mysql.com/downloads/mysql/
+	Go to Download Page -->
+
+Utilizar opción Developer Default
+----------------------------------------------------
+
+Instala workbench desde
+
+	https://dev.mysql.com/downloads/workbench/
+	Go to Download Page -->
+
+				 o desde 
+
+	https://www.mysql.com/products/workbench/
+----------------------------------------------------
+
+Instala xampp desde 
+	https://www.apachefriends.org/es/download.html
+	https://www.apachefriends.org/es/index.html
+
+----------------------------------------------------
+
+""");
+
+
+
 #pip install mysql-connector-python
 
+print("#pip install mysql-connector-python")
 import mysql.connector
 from mysql.connector import Error
 from mysql.connector import errorcode
@@ -100,6 +130,8 @@ print(hoy)
 host_local="localhost"
 usuario = "root"
 password_de_msql="mysql2020"
+
+
 nombre_DDBB = "BasesDeDatos"
 nombre_tabla = "Tabla"
 nombre_columna_1 = "descripcion"

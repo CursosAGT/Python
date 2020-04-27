@@ -121,7 +121,7 @@ def crear_base(nombre_base_MySQL):
 	cursor.close
 def listar_bases():
 	print ("Conectamos con MySQL")
-	connection = mysql.connector.connect(host="localhost",user="root", passwd="utn")
+	connection = mysql.connector.connect(host= host_local ,user= usuario , passwd= password_de_msql )
 	cursor = connection.cursor()
 	cursor.execute("SHOW DATABASES")
 	lista_de_bases=[]
