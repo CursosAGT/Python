@@ -2,7 +2,7 @@ from Estructura import *
 nuevo(0,"inicio");
 #################################################################
 def Ej_ya_hechos():
-	#Con tab colocaremos aqui las precticas hechas
+	#Con tab colocaremos aquí las practicas hechas
 	pass
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
@@ -29,7 +29,7 @@ https://www.w3schools.com/python/python_lists.asp
 https://python-para-impacientes.blogspot.com/2014/02/programacion-funcional-funciones-de.html
 https://python-para-impacientes.blogspot.com/2014/02/funciones.html
 """)
-nuevo(0,"inicio");
+pausa();lmpiar();
 #################################################################
 #Ejercicio_Funciones_Ej_001
 print("""

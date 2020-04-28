@@ -2,7 +2,7 @@ from Estructura import *
 nuevo(0,"inicio");
 #################################################################
 def Ej_ya_hechos():
-	#Con tab colocaremos aqui las precticas hechas
+	#Con tab colocaremos aquí las prácticas hechas
 	pass
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗

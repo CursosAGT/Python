@@ -167,10 +167,11 @@ print(radio, type(radio))
 area = 3.14159 * radio**2
 print("El area es ", area)
 #--------------------------------
+pausa();limpiar();
 nombre = "Primer Nombre"
 Nombre = "Segundo Nombre"
 print("nombre : "+nombre);
-print("Nombre : "+Nombre);
+print("Nombre : "+Nombre);#         cual es la diferencia???????
 nuevo(3);
 #################################################################
 #Clase_Variables_04
@@ -211,7 +212,7 @@ nuevo(4);
 #Clase_Variables_05
 variable = "variable original"
 def variable_global():#FUNCION <------------------------------------luego veremos esto en profundidad
-	print ("INGERSO A LA FUNCION")
+	print ("INGRERSO A LA FUNCION")
 	global variable1
 	variable = "variable global modificada desde dentro de una funcion"
 

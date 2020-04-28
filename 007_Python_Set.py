@@ -2,12 +2,12 @@ from Estructura import *
 nuevo(0,"inicio");
 #################################################################
 def Ej_ya_hechos():
-	#Con tab colocaremos aqui las precticas hechas
+	#Con tab colocaremos aquí las practicas hechas
 	pass
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
 ║                                                                             ║
-║                                  Python Set /Array Methods                  ║
+║                           Python Set /Array Methods                         ║
 ║                          ---------------------------                        ║
 ║                                                                             ║
 ║          Method    Description                                              ║
@@ -54,7 +54,7 @@ print("""
 
 https://www.w3schools.com/python/python_sets.asp
 """);
-nuevo(0,"inicio");
+pausa();lmpiar();
 #################################################################
 #Clase_Set_Ej_001
 Nombre_set_1 = {"linea 1","linea 2","linea 3","linea 4","linea 5","linea 6","linea 7","linea 8","linea 9","linea 1"}

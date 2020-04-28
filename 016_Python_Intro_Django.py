@@ -2,7 +2,7 @@ from Estructura import *
 nuevo(0,"inicio");
 #################################################################
 def Ej_ya_hechos():
-	#Con tab colocaremos aqui las prácticas hechas
+	#Con tab colocaremos aquí las prácticas hechas
 	pass
 print('''
 ╔═════════════════════════════════════════════════════════════════════════════╗
@@ -98,7 +98,7 @@ admin.site.register(Name)
 '''
 from django.contrib import admin
 from django.urls import path
-#from TP_django.views import utn#        Importa aqui desde tu proyecto la funcione)
+#from TP_django.views import utn#        Importa aquí desde tu proyecto la funcione)
 '''
 ╔ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ╗
 ║                                                                             ║
