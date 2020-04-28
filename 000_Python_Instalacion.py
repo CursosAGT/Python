@@ -82,9 +82,9 @@ print("""
 ║                  Escribe "py + tecla enter"                                 ║
 ║                                                                             ║
 ║            Ahora estarás dentro de python.                                  ║
-║                  Verás la version del interprete.                        ║
+║                  Verás la version del interprete.                           ║
 ║                  Y tres simbolos mayor junto al cursor ">>>█"               ║
-║            Funcionó...Tipea "exit() + tecla enter"                             ║
+║            Funcionó...Tipea "exit() + tecla enter"                          ║
 ║                                                                             ║
 ║            Error...Windows te da un error de que no reconoce el comando     ║
 ║                  Probablemente no hayas agregado la opción de apregar       ║
@@ -107,7 +107,7 @@ print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
 ║           Una vez instalado debemos agregar varias librerías                ║
 ║                  Python tiene un instalador propio muy simplie "pip"        ║
-║                  Primero deberá actualizar pip,                            ║
+║                  Primero deberá actualizar pip,                             ║
 ║                      Tecla windows + R                                      ║
 ║                      Escribe "cmd + tecla enter"                            ║
 ║                  pip install --upgrade pip                                  ║
@@ -148,7 +148,7 @@ print("""
 ║                En windows                                                   ║
 ║                  ¤ Descarga en archivo ejecutable 'MSI'                     ║
 ║                     Begin your Download....                                 ║
-║                   ---->No thanks, just start mydownload                      ║
+║                   ---->No thanks, just start mydownload                     ║
 ║                                                                             ║
 ║                     mysql-installer-web-community-......                    ║
 ║                                                                             ║
@@ -265,8 +265,10 @@ zypper -n in python-numpy python-scipy python-matplotlib ipython ipython-noteboo
 """);
 """copia y pega en consola.........
 
-pip install imutils tkintertable numpy pandas tkintertable opencv-python Pillow schedule plotly scipy matplotlib pytz nose sympy jupyter ipython
+python3 -m pip install --upgrade pip
 
+pip install imutils tkintertable numpy pandas tkintertable opencv-python Pillow schedule plotly scipy matplotlib pytz nose sympy jupyter ipython
+python3 -m pip install imutils tkintertable numpy pandas tkintertable opencv-python Pillow schedule plotly scipy matplotlib pytz nose sympy jupyter ipython
 pip install mysql-connector-python
 
 

@@ -2,7 +2,7 @@ from Estructura import *
 nuevo(0,"inicio");
 #################################################################
 def Ej_ya_hechos():
-	#Con tab colocaremos aqui las precticas hechas
+	#Con tab colocaremos aqui las practicas hechas
 	pass
 print("""
 ╔═════════════════════════════════════════════════════════════════════════════╗
@@ -82,12 +82,8 @@ Conjuntos inmutables_____frozenset___Conjunto inmutable"
 \n Una variable de instancia se define dentro de un método y pertenece a un objeto determinado de la clase instanciada.
 """);
 nuevo(0,"inicio");
-
 #################################################################
-#Clase_Variables_00
 
-nuevo(0);
-#################################################################
 #Clase_Variables_01 
 print("  *String - Cadenas puede incorporar en cualquiera de los dos comillas simples (') o comillas dobles (\") o para multiplas lineas se usan comillas triples de cada una (''' o """);
 cadena=('''"http://docs.python.org.ar/tutorial/3/classes.html"\n"https://www.python.org/downloads/"\n"https://python-para-impacientes.blogspot.com/2016/02/variables-de-control-en-tkinter.html"\n"https://pythones.net/instalando-python-3-que-es-un-ide/")''');
@@ -98,16 +94,20 @@ cadena=("Hola, todo el mundo!");
 print (type(cadena),cadena);
 cadena=('Hola, todo el mundo!');
 print (type(cadena),cadena);
-cadena=("17");print (type(cadena),cadena);
-cadena=(17);print (type(cadena),cadena);
-cadena=(3.2);print (type(cadena),int(cadena));
-print (input("Fin continuar?"));
+cadena=("17");
+print (type(cadena),cadena);
+cadena=(17);
+print (type(cadena),cadena);
+cadena=(3.2);
+print (type(cadena),int(cadena));
+
+
 print("  *String - Cadenas con doble comillas pueden incluir  comilla simple dentro o viceversa");
-cadena='UTN\n 2020'
+cadena=' Curso\n 2020'
 print (cadena);
-cadena=("UTN 2020")
+cadena=(" Curso 2020")
 print (cadena);
-cadena='"hola" como va todo'
+cadena='"hola" como va todo'#ver comillas
 print (cadena);
 cadena="'hola' como va todo"
 print (cadena);
@@ -118,8 +118,8 @@ cadena='Cat\'s plate'
 print (cadena);
 cadena='It s\'nt a problem'
 print (cadena);
-print (3*"UTN 2020")
-variable="UTN 2020"
+print (3*" Curso 2020")
+variable=" Curso 2020"
 print (variable)
 print (variable[2])
 print (variable[:4])
@@ -132,7 +132,7 @@ print ("a = "+str(a),type(a))
 print ("b = "+str(b),type(b))
 print ("c = "+str(c),type(c))
 print ("#--------------------------------")
-variable1,variable2="UTN "," 2020"
+variable1,variable2=" Curso "," 2020"
 print (variable1+variable2)
 print (variable2)
 print (variable1)
